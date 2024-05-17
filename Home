@@ -11,21 +11,7 @@
         <h1>Kongu Engineering Collage</h1>
         <h3>Thoppupalayam, Perundurai, Tamil Nadu - 638060</h3>
     </center>
-    <ul>
-        <h6>Non Technical Clubs</h6>
-        <ul>
-            <li>Quiz Club</li>
-            <li>EPRC Club</li>
-            <li>Tamil Mandaram</li>
-            <li>IELTS Club</li>
-        </ul>
-
-        <h6>Technical labs</h6>
-        <ol>
-            <li>Coding Clud</li>
-            <li>Android Development Club</li>
-            <li>Maths Club </li>
-            <li>Cloud Computing Club</li>
+   
     <center>
         <h4>Welcome to Kongu Engineering College</h4>
 
@@ -34,6 +20,23 @@
         <button type="button">Intra College Evntes</button>
         <button type="button">Workshops</button>
     </center>
+
+    <ul>
+        <h4>Non Technical Clubs</h4>
+        <ul>
+            <li>Quiz Club</li>
+            <li>EPRC Club</li>
+            <li>Tamil Mandaram</li>
+            <li>IELTS Club</li>
+        </ul>
+
+        <h4>Technical labs</h4>
+        <ol>
+            <li>Coding Clud</li>
+            <li>Android Development Club</li>
+            <li>Maths Club </li>
+            <li>Cloud Computing Club</li>
+
 
 </body>
 </html>
