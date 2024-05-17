@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color:#E7DDFF;">
+    <center>
+        <img src="https://yt3.ggpht.com/a/AATXAJxzONM3ztmy4YpKWUj0LZyoUZlLUrC3sGP72Q=s900-c-k-c0xffffffff-no-rj-mo" height="100px" width="100px">
+        <h1>Kongu Engineering Collage</h1>
+        <h3>Thoppupalayam, Perundurai, Tamil Nadu - 638060</h3>
+    </center>
+    <ul>
+        <h6>Non Technical Clubs</h6>
+        <ul>
+            <li>Quiz Club</li>
+            <li>EPRC Club</li>
+            <li>Tamil Mandaram</li>
+            <li>IELTS Club</li>
+        </ul>
+
+        <h6>Technical labs</h6>
+        <ol>
+            <li>Coding Clud</li>
+            <li>Android Development Club</li>
+            <li>Maths Club </li>
+            <li>Cloud Computing Club</li>
+    <center>
+        <h4>Welcome to Kongu Engineering College</h4>
+
+        <p>Events Conducted</p>
+        <button type="button">Inter College Events</button>
+        <button type="button">Intra College Evntes</button>
+        <button type="button">Workshops</button>
+    </center>
+
+</body>
+</html>
