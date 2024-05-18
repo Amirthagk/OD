@@ -1,0 +1,111 @@
+.eventcollage{
+    font-family:verdana; 
+    width: 80%;
+    background-color:#ffffff;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 700px;
+}
+.body{
+    font-family:verdana;
+    background-color:#E8DAEF;
+}
+.b1{
+    background-image: url(https://th.bing.com/th/id/OIP.hc-EO_wgjpRMpNXdkuqK2gHaE8?rs=1&pid=ImgDetMain);
+}
+.b2{
+    background: linear-gradient(90deg, rgb(249, 131, 249), pink);
+}
+.forgetpdw{
+    font-family:"verdana"; 
+    width: 80%;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 300px;
+    margin-top: 15%;
+}
+
+.fp{
+    background-color:#D2B4DE  ;
+}
+
+.s{
+    background-color:#D2B4DE  ;   
+}
+
+.si{
+    background-color:#D2B4DE  ;
+}
+
+.l{
+    background-color:#D2B4DE  ;   
+}
+
+.Icollage{
+    font-family:verdana; 
+    background-color:#ffffff;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 700px;
+}
+.login{
+    font-family:verdana; 
+    width: 80%;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 400px;
+    margin-top: 10%;
+    font-size: 20px;
+}
+.signup{
+    font-family:verdana; 
+    width: 80%;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 400px;
+    margin-top: 10%;
+    font-size: 20px;
+}
+.submit1{
+    font-family:"verdana"; 
+    width: 80%;
+    color: black;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    max-width: 550px;
+    margin-top: 10%;
+    font-size: 20px;
+}
+a:link, a:visited{  
+    background-color: white;  
+    color: black;  
+    border: 2px solid blck;  
+    padding: 10px 20px;  
+    text-align: center;  
+    text-decoration: none;  
+    display: inline-block;
+    font-size: 10px;
+}
+a:hover, a:active{  
+    background-color: black;  
+    color: white;
+}
+.t1{
+    background-color:WHITE;
+    text-align:center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    font-size: 40px;
+}
