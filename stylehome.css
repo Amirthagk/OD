@@ -1,0 +1,38 @@
+
+body {
+    background-color: rgb(250, 250, 245);
+}
+header {
+    background-image: url('https://cdn.wallpapersafari.com/67/76/qtpSIw.jpg');
+    text-align: center;
+}
+marquee {
+    background-color: dodgerblue;
+}
+#button {
+    text-align: center;
+    background-color: lavender;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-color: black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+section {
+      font-family: Georgia;
+}
+footer {
+    background-image: url('https://cdn.wallpapersafari.com/67/76/qtpSIw.jpg');
+    text-align: center;
+}

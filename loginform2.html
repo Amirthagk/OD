@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Log in</title>
+        <link href="C:\xampp\htdocs\23ALR005\day2\login\stylelogin.css" rel="stylesheet">
+        <style>
+            body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-image: url('https://i.pinimg.com/originals/0e/e9/67/0ee967a36d0ff13b5f28d73de064d551.jpg');
+        background-size: cover;
+        background-position: center;
+        }
+
+        form {
+        border: 1px solid #ccc;
+       padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        width: 25%;
+        }
+
+        label, input {
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        }
+
+        input[type="submit"] {
+        width: auto;
+        cursor: pointer;
+        }
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+                <legend>Login</legend>
+                <label for="email">Email</label><br>
+                <input type="email" id="eamil" name="email" placeholder="enter your registered email" required><br>
+                <label for="password">Password</label><br>
+                <input type="password" id="password" name="password" placeholder="password" minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+" required><br>
+                <a href="C:\xampp\htdocs\23ALR005\day2\Resetpassword2.html">Forgot Password</a>
+                </fieldset>
+        </form>
+</html>
