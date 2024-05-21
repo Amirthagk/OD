@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #FFD1DC, #A1C3D1, #FFDFD3, #D4A5A5);
+            background-size: 400% 400%;
+            animation: gradientBackground 15s ease infinite;
+        }
+        fieldset{
+            color: black;
+        }
+
+        form {
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent background */
+            width: 90%;
+            max-width: 400px; /* Limit form width */
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        legend {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        label, input, select {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="date"], input[type="email"], input[type="password"], select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type="radio"] {
+            display: inline-block;
+            width: auto;
+        }
+        button[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Student Sign-in</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            
+            <label for="dob">Date of birth</label>
+            <input type="date" id="dob" name="dob" required>
+            
+            <label for="email">Email id</label>
+            <input type="email" id="email" name="email" placeholder="Enter your college email id" required>
+            
+            <lable>Gender<lable><br>
+                <input type="radio" name="Male">Female
+                <input type="radio" name="Male">Male                
+            <br>
+            
+            <label for="dept">Department</label>
+            <select id="dept" name="dept" required>
+                <option value="AIML">AIML</option>
+                <option value="ECE">ECE</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="EEE">EEE</option>
+                <option value="CSD">CSD</option>
+                <option value="Chem">Chem</option>
+                <option value="Civil">Civil</option>
+                <option value="Auto">Auto</option>
+                <option value="AIDS">AIDS</option>
+                <option value="Mech">Mech</option>
+                <option value="Mechtron">Mechtron</option>
+            </select>
+            
+            <label for="password">New password</label>
+            <input type="password" id="password" name="password" placeholder="Enter new password" minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+" required>
+            
+            <label for="rpassword">Re-enter your password</label>
+            <input type="password" id="rpassword" name="rpassword" placeholder="Re-enter your password" minlength="8" maxlength="15" pattern="[a-zA-Z0-9]+" required>
+            
+            <button type="submit" formaction="D:\XAMPP\htdocs\2 5\Day 3 - Copy\apply.html" value="Submit">submit</button>
+        </fieldset>
+    </form>
+</body>
+</html>
