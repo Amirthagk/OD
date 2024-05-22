@@ -1,3 +1,39 @@
+<?php
+session_start();
+include('php.php'); // Adjust path if necessary
+
+if ($con->connect_error) {
+    die("Connection failed: " . $con->connect_error);
+}
+
+if (!isset($_SESSION['email'])) {
+    header("Location: c_a_login.php");
+    exit();
+} else {
+    $email = $_SESSION['email'];
+    $sql = "SELECT name, department FROM detials WHERE email = ?";
+    $stmt = $con->prepare($sql);
+    if ($stmt) {
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            $_SESSION['name'] = $row['name'];
+            $_SESSION['department'] = $row['department'];
+        } else {
+            echo "No user found.";
+            exit();
+        }
+        $stmt->close();
+    } else {
+        echo "SQL Error: " . $con->error;
+        exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,101 +44,91 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            font-family: verdana;
+            background: linear-gradient(135deg, #FFD1DC, #A1C3D1, #FFDFD3, #D4A5A5);
+            color: #333333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        aside, section {
+            margin: 20px 0;
+        }
+    </style>
 </head>
-
-  <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">OD APPICATION</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li><a href="http://localhost/2%205/Day%203/bootstrap1.php">Home</a></li>
-      <li><a href="http://localhost/2%205/Day%203/cal/index.php">Event-Calender</a></li>
-    </ul>
-    <form class="navbar-form navbar-right" action="/action_page.php">
-      <div class="form-group">
-        <input type="text" class="form-control" placeholder="Search">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-  </div>
-</nav>
-<body style="font-family:verdana; background: linear-gradient(135deg, #FFD1DC, #A1C3D1, #FFDFD3, #D4A5A5);
-color: #333333;">
-<section>
-    <center><font size="5"><h1 style="font-family:verdana;">
-        <?php
-session_start();
-if (!isset($_SESSION['email'])) {
-    header("Location: c_a_login.php");
-    exit();
-}
-?>
-    <h1>Welcome</h1>
-    <?php if (isset($_SESSION['login_success'])): ?>
-      <div class="alert alert-success">
-        <?php
-          echo htmlspecialchars($_SESSION['login_success']);
-          unset($_SESSION['login_success']); // Clear the message after displaying it
-        ?>
-      </div>
-    <?php endif; ?>
-    <p>You are logged in as <?php echo htmlspecialchars($_SESSION['email']); ?></p>
-    <a href="home1.php" class="btn btn-danger">Logout</a>
-  </div></h1></font><br><br>
-    <center>
-        <h3 style="font-family:Times New Roman">Apply for OD</h3>
-
-        <p style="font-family:Times New Roman">Events Conducted</p>
-        <div class="x">
-        <a href="http://localhost/2%205/Day%203/Interclg.php">Inter-College Events</a>
+<body>
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">OD APPLICATION</a>
         </div>
-        <div class="x">
-        <a href="http://localhost/2%205/Day%203/clgevent.php">Collage event</a>
-        </div>
-        <div class="x">
-        <a href="#">Workshops</a>
-        </div>
-    </center>
-</section>
-<br><br>
-<aside>
-    <button>
-    <ul align="left" style="font-family:Serif Georgia">
-        <h4>Non Technical Clubs</h4>
-        <ul>
-            <li>
-                    Quiz Club
-            </li>
-            <li>
-                    EPRC Club
-            </li>
-            <li>
-                    Tamil Mandaram
-            </li>
-            <li>
-                    IELTS Club
-            </li>
+        <ul class="nav navbar-nav">
+            <li><a href="http://localhost/2%205/Day%203/home1.php">Home</a></li>
+            <li><a href="http://localhost/2%205/Day%203/cal/index.php">Event-Calendar</a></li>
         </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <!-- Sidebar -->
+        <aside class="col-md-4">
+            <font style="font-family: 'Times New Roman' font-size: 30px;">
+                <h1>Welcome</h1>
+                <?php if (isset($_SESSION['login_success'])): ?>
+                    <div class="alert alert-success">
+                        <?php
+                        echo htmlspecialchars($_SESSION['login_success']);
+                        unset($_SESSION['login_success']);
+                        ?>
+                    </div>
+                <?php endif; ?>
+                <p>You are logged in as <?php echo htmlspecialchars($_SESSION['email']); ?></p>
+                <p>Name: <?php echo htmlspecialchars($_SESSION['name']); ?></p>
+                <p>Department: <?php echo htmlspecialchars($_SESSION['department']); ?></p>
+                <a href="http://localhost/2%205/Day%203/home1.php" class="btn btn-danger">Logout</a>
+            </font>
+            <br><br><br>
+            <h4>Non-Technical Clubs</h4>
+            <ul style="font-family: 'Georgia', serif;">
+                <li>Quiz Club</li>
+                <li>EPRC Club</li>
+                <li>Tamil Mandaram</li>
+                <li>IELTS Club</li>
+            </ul>
+            <h4>Technical Clubs</h4>
+            <ol style="font-family: 'Georgia', serif;">
+                <li>Coding Club</li>
+                <li>Android Development Club</li>
+                <li>Maths Club</li>
+                <li>Cloud Computing Club</li>
+            </ol>
+        </aside>
+        
+        <!-- Main Content -->
+        <main class="col-md-8"><center>
+        <h3 style="font-family: 'Times New Roman'; font-size: 50px;">Kongu Engineering college</h3>
+    <h3 style="font-family: 'Times New Roman'; font-size: 60px;">Apply for OD</h3>
+    <p style="font-family: 'Times New Roman'; font-size: 40px;">Events Conducted</p>
+    <div class="x">
+        <a href="http://localhost/2%205/Day%203/Interclg.php">Inter-College Events</a>
+    </div>
+    <div class="x">
+        <a href="http://localhost/2%205/Day%203/clgevent.php">College event</a>
+    </div>
+</main></center>
 
-        <h4>Technical labs</h4>
-    <ol align="left"  style="font-family:Serif Georgia">
-            <li>
-                Coding Clud
-            </li>
-            <li>
-                    Android Development Club
-            </li>
-            <li>
-                    Maths Club
-            </li>
-            <li>
-                    Cloud Computing Club
-            </li>
-        </ol>
-    </button>
-</aside>
+    </div>
+</div>
+<br><br><br>
+    <marquee direction="right" bgcolor="white" width="100%" height="30px" style="font-family: 'Lucida Console';">
+        Kongu Engineering College
+    </marquee>
 </body>
-<br><br>
-<marquee direction="right" bgcolor="white" width="100%" height="100%"  style="font-family:Lucida Console" > kongu Engineering college </marquee>
 </html>

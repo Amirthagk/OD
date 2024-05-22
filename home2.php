@@ -69,16 +69,16 @@ a:hover, a:active{
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Login<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="http://localhost/2%205/Day%203/c_a_login.php">Faculty</a></li>
-          <li><a href="D:\XAMPP\htdocs\2 5\Day 3\std_login.php">Student</a></li>
+          <li><a href="http://localhost/2%205/Day%203/std_login.php">Student</a></li>
         </ul>
       </li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Sign-in<span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="http://localhost/2%205/Day%203/c_a_signin.php">Faculty</a></li>
-          <li><a href="D:\XAMPP\htdocs\2 5\Day 3\std_signin.php">Student</a></li>
+          <li><a href="http://localhost/2%205/Day%203/std_signin.php">Student</a></li>
         </ul>
       </li>
-</ul>
+    </ul>
   </div>
 </nav>
   </div>
@@ -87,10 +87,10 @@ a:hover, a:active{
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
 
 <div class="carousel-inner">
-<div class="item active">
+<div class="item">
 <img src="I1.jpg" alt="image 1">
 </div>
-<div class="item">
+<div class="item active">
 <img src="I2.jpg" alt="image 2">
 </div>
 <div class="item">
@@ -112,26 +112,26 @@ a:hover, a:active{
 </div>
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-4 bg-danger text-white text-center p-3">
+    <div class="col-sm-4 bg-info text-dark text-center p-3">
       <div class="text">
-        <h1>ABOUT</h1>
-        <h4>Learn more about our college <br> Explore with images<br><br> </h4>
+        <h1>Q PAPER</h1>
+        <h4>Take a look at previous year <br> question papers with<br>solutions</h4>
       </div><br>
-      <a href="https://kongu.ac.in/pages/aboutkec.php">MORE</a>
+      <a href="https://coe.kongu.edu/#">MORE</a>
       <p><br></p>
     </div>
 
-    <div class="col-sm-4 bg-success text-white text-center p-3">
-      <h1>AWARDS</h1>
-      <h4>Learn more about our college<br> achivements and talents </h4><br><br>
-      <a href="https://kongu.ac.in/awards.php">Awards</a>
+    <div class="col-sm-4 bg-warming text-white text-center p-3">
+      <h1>Libary</h1>
+      <h4>Learn more about our prestigious library<br>books available<br></h4><br>
+      <a href="https://kongu.ac.in/facilities/library.php">Courses</a>
       <p><br></p>
     </div>
 
-    <div class="col-sm-4 bg-info text-white text-center p-3">
-      <h1>OD FORM</h1>
-      <h4>Apply for OD form<br>Check your OD approval or rejection <br>from facilty</h4><br>
-      <a href="http://localhost/2%205/Day%203/homepage.php">APPLY</a>
+    <div class="col-sm-4 bg-warning text-white text-center p-3">
+      <h1>FACILITY</h1>
+      <h4>About our collage facility , surroundings <br>experience provided <br> to students</h4><br>
+      <a href="https://kongu.ac.in/facilities.php">APPLY</a>
       <p><br></p>
     </div>
   </div>
